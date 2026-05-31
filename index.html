@@ -5,61 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Johnson | Geospatial Portfolio</title>
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      color: #1f2933;
+      background: #f4f7f6;
       line-height: 1.6;
-      color: #222;
-      background: #f7f9fb;
     }
 
     header {
-      background: #1f4e3d;
+      min-height: 430px;
+      background:
+        linear-gradient(rgba(20, 50, 42, 0.82), rgba(20, 50, 42, 0.82)),
+        url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 60px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 40px 20px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.6rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+      font-size: 1.25rem;
+      max-width: 850px;
+      margin: 10px auto;
     }
 
     nav {
-      background: #16382c;
-      padding: 12px;
+      background: #12352b;
+      padding: 14px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 14px;
       text-decoration: none;
       font-weight: bold;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #1f4e3d;
+      margin-bottom: 18px;
+      font-size: 2rem;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      max-width: 900px;
+    }
+
+    .highlight {
+      background: white;
+      border-left: 6px solid #1f4e3d;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
 
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
       background: white;
       padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
 
     .card h3 {
@@ -67,22 +100,34 @@
       margin-top: 0;
     }
 
+    .tag {
+      display: inline-block;
+      background: #e3eee9;
+      color: #1f4e3d;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 4px 4px 4px 0;
+    }
+
     footer {
       text-align: center;
-      padding: 25px;
-      background: #16382c;
+      background: #12352b;
       color: white;
+      padding: 25px;
       margin-top: 30px;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #1f4e3d;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
+    a {
+      color: #1f4e3d;
+    }
+
+    @media (max-width: 700px) {
+      header h1 { font-size: 2.2rem; }
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
     }
   </style>
 </head>
@@ -90,12 +135,19 @@
 <body>
 
   <header>
-    <h1>Daniel Johnson</h1>
-    <p>Geospatial Professional | GIS | Remote Sensing | Environmental Analysis</p>
+    <div>
+      <h1>Daniel Johnson</h1>
+      <p><strong>Geospatial Professional | GIS | Remote Sensing | Environmental Analysis</strong></p>
+      <p>
+        Using GIS, remote sensing, and spatial analysis to study landscape change,
+        environmental patterns, conservation issues, and geospatial decision-making.
+      </p>
+    </div>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#research">Research</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -116,43 +168,59 @@
     </p>
   </section>
 
+  <section id="research">
+    <h2>Featured Research</h2>
+    <div class="highlight">
+      <h3>Landscape Change Detection and Chronic Wasting Disease</h3>
+      <p>
+        My thesis research examines the relationship between landscape change
+        and the spread of Chronic Wasting Disease across Louisiana and Mississippi.
+        The project integrates GIS, remote sensing, vegetation change detection,
+        spatial analysis, and environmental data to explore patterns associated with
+        disease occurrence and landscape conditions.
+      </p>
+      <span class="tag">GIS</span>
+      <span class="tag">Remote Sensing</span>
+      <span class="tag">Landscape Change</span>
+      <span class="tag">Wildlife Disease Ecology</span>
+      <span class="tag">Environmental Analysis</span>
+    </div>
+  </section>
+
   <section id="projects">
     <h2>Featured Projects</h2>
 
     <div class="card-grid">
 
       <div class="card">
-        <h3>Chronic Wasting Disease Landscape Analysis</h3>
+        <h3>Chronic Wasting Disease Thesis</h3>
         <p>
-          Thesis research examining the relationship between landscape change,
-          vegetation patterns, and the spread of Chronic
-          Wasting Disease across Louisiana and Mississippi.
+          Research-focused GIS and remote sensing project analyzing landscape change,
+          vegetation patterns, and spatial relationships connected to Chronic Wasting Disease.
         </p>
       </div>
 
       <div class="card">
         <h3>Drone Photogrammetry and Visibility Analysis</h3>
         <p>
-          A field-based GIS project using DJI Mini 4 Pro imagery, photogrammetry
-          processing, elevation products, and line-of-sight analysis to evaluate
-          visibility around a deer stand.
+          Field-based project using DJI Mini 4 Pro imagery, photogrammetry processing,
+          elevation products, and line-of-sight analysis for environmental and land-based mapping.
         </p>
       </div>
 
       <div class="card">
         <h3>Hurricane Vegetation Change Detection</h3>
         <p>
-          Remote sensing analysis using pre- and post-event imagery to evaluate
-          vegetation change and potential storm impacts through NDVI-based methods.
+          Remote sensing workflow using pre- and post-event imagery to evaluate vegetation
+          change and possible storm-related environmental impacts.
         </p>
       </div>
 
       <div class="card">
-        <h3>Web GIS and ArcGIS Applications</h3>
+        <h3>Web GIS Applications</h3>
         <p>
-          Interactive GIS projects using ArcGIS Online, Experience Builder,
-          Survey123, web maps, dashboards, and StoryMaps to communicate spatial
-          information effectively.
+          Interactive mapping projects using ArcGIS Online, Experience Builder,
+          StoryMaps, Survey123, dashboards, and web maps to communicate spatial information.
         </p>
       </div>
 
@@ -166,22 +234,22 @@
 
       <div class="card">
         <h3>GIS</h3>
-        <p>ArcGIS Pro, ArcGIS Online, Experience Builder, StoryMaps, Survey123, spatial analysis, cartography, geodatabases.</p>
+        <p>ArcGIS Pro, ArcGIS Online, Experience Builder, StoryMaps, Survey123, spatial analysis, cartography, and geodatabases.</p>
       </div>
 
       <div class="card">
         <h3>Remote Sensing</h3>
-        <p>Landsat, Sentinel-2, NAIP, NDVI, change detection, image classification, ENVI, raster analysis.</p>
+        <p>Landsat, Sentinel-2, NAIP, NDVI, change detection, image classification, ENVI, and raster analysis.</p>
       </div>
 
       <div class="card">
         <h3>Programming & Data</h3>
-        <p>Python, ArcPy, pandas, R, spatial data workflows, geospatial data processing.</p>
+        <p>Python, ArcPy, pandas, R, spatial data processing, and geospatial workflow automation.</p>
       </div>
 
       <div class="card">
         <h3>Drone & Photogrammetry</h3>
-        <p>DJI Mini 4 Pro, Pix4D, WebODM, orthomosaics, DSM/DTM products, 3D visualization.</p>
+        <p>DJI Mini 4 Pro, Pix4D, WebODM, orthomosaics, DSM/DTM products, and 3D visualization.</p>
       </div>
 
     </div>
